@@ -1,0 +1,7 @@
+# Maven files
+mercadoria-ws-rest/target/
+
+# Settings of ecplise project
+mercadoria-ws-rest/.settings
+mercadoria-ws-rest/.project
+mercadoria-ws-rest/.classpath
