@@ -1,0 +1,45 @@
+.menu
+  padding-right 10px
+
+  > .category
+    width 100%
+    heigth 35px
+    padding-left 10px
+    display flex
+
+    > .icon
+      heigth 24px
+      width 24px
+    > .name
+      color #fff
+      margin-top 4px
+      margin-left 5px
+  > .list
+    width 100%
+    position relative
+    padding-top 10px
+    padding-rigth 5px
+
+    > .item
+      width 100%
+      padding 5px 0
+      padding-left 30px
+
+      > .link
+        heigth 60px
+        width 100%
+        display block
+        > .label
+          color $lightPrimaryColor
+          font-size em(15px)
+      &:hover
+        color $textPrimaryColor
+        background $accentColor
+        opacity 0.9
+        color #fff
+
+.itemselected
+  color $textPrimaryColor
+  background $accentColor
+  opacity 0.9
+  color #fff

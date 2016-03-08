@@ -2,9 +2,11 @@
   "name": "servidor-web",
   "version": "1.0.0",
   "description": "Responsável por forncer as paginas web usando o angular",
-  "main": "index.js",
+  "main": "back/bin/www",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prestart": "gulp run",
+    "start": "node back/bin/www",
+    "test": "gulp test"
   },
   "author": "Joaquim Neto",
   "license": "ISC",
@@ -20,7 +22,8 @@
     "jade": "^1.11.0",
     "method-override": "^2.3.5",
     "morgan": "^1.7.0",
-    "serve-favicon": "^2.3.0"
+    "serve-favicon": "^2.3.0",
+    "stream-consume": "^0.1.0"
   },
   "devDependencies": {
     "angular": "^1.5.0",
@@ -28,6 +31,7 @@
     "angular-messages": "^1.5.0",
     "angular-mocks": "^1.5.0",
     "angular-route": "^1.5.0",
+    "angular-scroll": "^1.0.0",
     "angular-touch": "^1.5.0",
     "angular-ui-bootstrap": "^1.1.2",
     "babelify": "^7.2.0",
@@ -68,6 +72,7 @@
     "ngstorage": "^0.3.10",
     "run-sequence": "^1.1.5",
     "sequencify": "0.0.7",
+    "stream-consume": "^0.1.0",
     "stylus": "^0.53.0",
     "stylus-type-utils": "0.0.3",
     "textangular": "^1.5.0",

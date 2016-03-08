@@ -1,0 +1,33 @@
+.container-buttons
+  position relative
+  display flex
+  justify-content space-between
+  flex-wrap wrap
+  width 200px
+  margin-top 15px
+
+  > .buttonsave
+    height 35px
+    border-radius 2px
+    background-color $primaryColor
+    min-width 100px
+    border none
+    color #FFF
+    font-size rem(16px)
+    border-radius 2px
+    transition(all, 0.2s, linear)
+
+  > .buttoncancel
+    height 35px
+    background #AF2828
+    border none
+    color #FFF
+    font-size rem(16px)
+    border-radius 2px
+    text-align center
+    vertical-align middle
+    padding 5px
+    transition(all, 0.2s, linear)
+
+.buttondisabled
+  background #ddd

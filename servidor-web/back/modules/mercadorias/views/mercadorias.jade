@@ -1,0 +1,23 @@
+section.title
+  div.name Operações
+
+section
+  table
+    thead
+      tr
+        th Código
+        th Nome
+        th Tipo
+        th Tipo Negócio
+        th Preço
+        th Qtd
+        th Data Cadastro
+    tbody
+      tr(data-ng-repeat="mercadoria in ::mercadorias track by mercadoria.idMercadoria")
+        td {{mercadoria.codigo}}
+        td {{mercadoria.nome}}
+        td {{mercadoria.tipo}}
+        td {{mercadoria.tipoNegocio}}
+        td {{mercadoria.preco}}
+        td {{mercadoria.quantidade}}
+        td {{mercadoria.dataCadastro}}

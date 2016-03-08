@@ -1,0 +1,4 @@
+div.message-dialog(data-ng-show="show", style="display: none;")
+  div.message-dialog-close(data-ng-click="fecharModal()") X
+  div.message-dialog-titulo {{titulo}}
+  div.message-dialog-mensagem(data-ng-bind-html="mensagem")

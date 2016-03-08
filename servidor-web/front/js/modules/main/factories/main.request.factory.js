@@ -26,8 +26,28 @@ function requestService($http, $location) {
     console.log($location.$$port);
   }
 
+  function postDev (cb, path, data) {
+    console.log(data);
+    var promisse = $http.get('/api/system/uri');
+    promisse.success(function (uri) {
+      console.log(data);
+      cb($http.post(uri + path, data, [{'Content-Type': 'application/json'}]));
+    });
+    promisse.error(function (err) {
+      console.log('Erro ao cadastrar de: ' + route);
+      console.log(err);
+    });
+  }
+
+  function postProd (cb, path, data) {
+    var uri = 'http://rest.joaquimsn.com:4000';
+    cb($http.post(uri + path, data, [{'Content-Type': 'application/json'}]));
+  }
+
+
   return {
-    execute: ($location.$$port === 80) ? requestProd : requestDev
+    execute: ($location.$$port === 80) ? requestProd : requestDev,
+    post: ($location.$$port === 80) ? postProd : postDev
   };
 }
 

@@ -1,0 +1,82 @@
+section.title
+  div.name Cadastro Mercadoria
+
+section.cadastro
+  form(novalidate name="mercadoriaForm" data-ng-submit="submitFunction()")
+    div.form-mercadoria
+
+      div.input-container.size20
+        label.label(for="codigo") Código
+        div.message(data-ng-messages="mercadoriaForm.codigo.$error", data-ng-if="mercadoriaForm.codigo.$touched")
+
+        input.input(name="codigo",
+                    type="text",
+                    data-ng-model="mercadoria.codigo",
+                    maxlength="64",
+                    minlength="2",
+                    required)
+
+      div.input-container.size40
+        label.label(for="nome") Nome
+        div.message(data-ng-messages="mercadoriaForm.nome.$error", data-ng-if="mercadoriaForm.nome.$touched")
+
+        input.input(name="nome",
+                    type="text",
+                    data-ng-model="mercadoria.nome",
+                    maxlength="256",
+                    minlength="2",
+                    required)
+
+      div.input-container.size40
+        label.label(for="tipo") Tipo
+        div.message(data-ng-messages="mercadoriaForm.tipo.$error", data-ng-if="mercadoriaForm.tipo.$touched")
+
+        input.input(name="tipo",
+                    type="text",
+                    data-ng-model="mercadoria.tipo",
+                    maxlength="128",
+                    minlength="2",
+                    required)
+
+      div.input-container.size40
+        label.label(for="tipoNegocio") Tipo do Negócio
+        div.message(data-ng-messages="mercadoriaForm.tipoNegocio.$error", data-ng-if="mercadoriaForm.tipoNegocio.$touched")
+
+        select.input(name="tipoNegocio",
+                    type="text",
+                    data-ng-model="mercadoria.tipoNegocio",
+                    required)
+          option(ng-repeat="opcao in opcoesTipoNegocio" value="{{opcao.id}}"){{opcao.value}}
+
+      div.input-container.size30
+        label.label(for="preco") Preço
+        div.message(data-ng-messages="mercadoriaForm.preco.$error", data-ng-if="mercadoriaForm.preco.$touched")
+          div(ng-messages-include="partials/main/messages-validation")
+
+        input.input(name="preco",
+                    type="text",
+                    data-ng-model="mercadoria.preco",
+                    maxlength="6",
+                    minlength="1",
+                    required)
+
+      div.input-container.size30
+        label.label(for="quantidade") Quantidade
+        div.message(data-ng-messages="mercadoriaForm.quantidade.$error", data-ng-if="mercadoriaForm.quantidade.$touched")
+
+        input.input(name="quantidade",
+                    type="text",
+                    data-ng-model="mercadoria.quantidade",
+                    maxlength="6",
+                    minlength="1",
+                    required)
+    div.container-buttons(data-ng-if="!formDisabled")
+      button.buttonsave(title="Salvar",
+                                         data-ng-disabled="usuarioForm.$invalid",
+                                         data-ng-click="salvar(mercadoria)") Salvar
+      a.buttoncancel(data-ng-href="{{systemUri.mercadoriasCreate}}",
+                                      title="Cancelar") Cancelar
+
+message-dialog(data-show="showDialog",
+               data-titulo="tituloDialog",
+               data-mensagem="mensagemDialog")
