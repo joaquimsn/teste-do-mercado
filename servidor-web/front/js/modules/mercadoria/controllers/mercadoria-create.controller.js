@@ -23,9 +23,14 @@ function MercadoriaCreateController($scope, modelFactory, mercadoriaService, mes
   };
 
   $scope.opcoesTipoNegocio = [
+    {id: "", value: "Selecione"},
     {id: "VENDA", value: "Venda"},
     {id: "COMPRA", value: "Compra"},
   ];
+
+  $scope.regex = {
+    soNumeros: '/[0-9]/'
+  };
 }
 
 

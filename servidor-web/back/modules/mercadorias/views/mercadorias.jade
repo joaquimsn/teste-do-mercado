@@ -19,6 +19,6 @@ section
         td.td {{mercadoria.nome}}
         td.td {{mercadoria.tipo}}
         td.td {{mercadoria.tipoNegocio}}
-        td.td {{mercadoria.preco}}
+        td.td {{mercadoria.preco | currency:'R$'}}
         td.td {{mercadoria.quantidade}}
         td.td {{mercadoria.dataCadastro | date : dateFormat}}
