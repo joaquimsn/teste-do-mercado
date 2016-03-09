@@ -60,7 +60,7 @@ section.cadastro
         input.input(name="preco",
                     type="text",
                     data-ng-model="mercadoria.preco",
-                    data-ng-pattern="regex.soNumeros"
+                    data-ng-pattern="/[0-9]/"
                     maxlength="6",
                     minlength="1",
                     ui.utils.masks="6"
@@ -74,7 +74,7 @@ section.cadastro
         input.input(name="quantidade",
                     type="text",
                     data-ng-model="mercadoria.quantidade",
-                    data-ng-pattern="regex.soNumeros"
+                    data-ng-pattern="/[0-9]/"
                     maxlength="6",
                     minlength="1",
                     required)

@@ -20,7 +20,7 @@ function requestService($http, $location) {
   }
 
   function requestProd (cb, route) {
-    var uri = 'http://rest.joaquimsn.com:4000';
+    var uri = 'http://rest.joaquimsn.com:8080';
     cb($http.get(uri + route));
     console.log($location);
     console.log($location.$$port);
@@ -40,7 +40,7 @@ function requestService($http, $location) {
   }
 
   function postProd (cb, path, data) {
-    var uri = 'http://rest.joaquimsn.com:4000';
+    var uri = 'http://rest.joaquimsn.com:8080';
     cb($http.post(uri + path, data, [{'Content-Type': 'application/json'}]));
   }
 
