@@ -15,4 +15,4 @@ O diretório servidor-web é referente ao servidor web responsável por fornecer
 
 **URL acesso aplicação** http://teste.joaquimsn.com
 
- **URL acesso API** http://www.rest.joaquimsn.com:8080/tesde-do-mercado/api/mercadorias
+ **URL acesso API** http://rest.joaquimsn.com:8080/teste-do-mercado/api/mercadorias
