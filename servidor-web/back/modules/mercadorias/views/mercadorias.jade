@@ -2,22 +2,23 @@ section.title
   div.name Operações
 
 section
-  table
+  h3 Transações realizadas
+  table.table
     thead
-      tr
-        th Código
-        th Nome
-        th Tipo
-        th Tipo Negócio
-        th Preço
-        th Qtd
-        th Data Cadastro
+      tr.tr
+        th.th Código
+        th.th Nome
+        th.th Tipo
+        th.th Tipo Negócio
+        th.th Preço
+        th.th Qtd
+        th.th Data Cadastro
     tbody
-      tr(data-ng-repeat="mercadoria in ::mercadorias track by mercadoria.idMercadoria")
-        td {{mercadoria.codigo}}
-        td {{mercadoria.nome}}
-        td {{mercadoria.tipo}}
-        td {{mercadoria.tipoNegocio}}
-        td {{mercadoria.preco}}
-        td {{mercadoria.quantidade}}
-        td {{mercadoria.dataCadastro}}
+      tr.tr(data-ng-repeat="mercadoria in ::mercadorias track by mercadoria.idMercadoria")
+        td.td {{mercadoria.codigo}}
+        td.td {{mercadoria.nome}}
+        td.td {{mercadoria.tipo}}
+        td.td {{mercadoria.tipoNegocio}}
+        td.td {{mercadoria.preco}}
+        td.td {{mercadoria.quantidade}}
+        td.td {{mercadoria.dataCadastro | date : dateFormat}}

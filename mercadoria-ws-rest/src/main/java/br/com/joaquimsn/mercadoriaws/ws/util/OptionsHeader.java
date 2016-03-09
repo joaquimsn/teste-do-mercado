@@ -24,16 +24,7 @@ public class OptionsHeader implements	ContainerResponseFilter {
 	public void filter(ContainerRequestContext requestContext, ContainerResponseContext responseContext)
 			throws IOException {
 		responseContext.getHeaders().add(ACCESS_CONTROL_ALLOW_ORIGIN, ACCESS_CONTROL_ALLOW_ORIGIN_ANYONE);
-		String requestHeaders = responseContext.getHeaderString(ACCESS_CONTROL_REQUEST_HEADERS);
-		String requestMethods = responseContext.getHeaderString(ACCESS_CONTROL_REQUEST_METHOD);
-		
-		if (requestHeaders != null) {
-			responseContext.getHeaders().add(ACCESS_CONTROL_ALLOW_HEADERS, requestHeaders);
-		}
-
-        if (requestMethods != null) {
-        	responseContext.getHeaders().add(ACCESS_CONTROL_ALLOW_METHODS, requestMethods);
-        }
-
+		responseContext.getHeaders().add(ACCESS_CONTROL_ALLOW_METHODS, "GET, POST, DELETE, PUT");
+		responseContext.getHeaders().add(ACCESS_CONTROL_ALLOW_HEADERS, "X-Requested-With, Content-Type, X-Codingpedia");
 	}
 }

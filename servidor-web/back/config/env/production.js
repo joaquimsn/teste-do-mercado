@@ -1,9 +1,9 @@
 module.exports = {
   env: 'production',
-  port: 4000,
+  port: 6000,
   address: 'localhost',
-  domain: 'localhost:4000',
+  domain: 'localhost:6000',
   api: {
-    port: 4000
+    port: 8080
   }
 };
